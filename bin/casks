@@ -1,0 +1,40 @@
+#!/bin/bash
+
+apps=(
+  'android-file-transfer'
+  'java'
+  'android-studio'
+  'appcleaner'
+  'atom'
+  'caffeine'
+  'intellij-idea'
+  'dockertoolbox'
+  'dropbox'
+  'deluge' #bittorrent
+  'encryptr'
+  'evernote'
+  'fiddler'
+  'firefox'
+  'firefoxdeveloperedition'
+  'google-chrome'
+  'google-chrome-canary'
+  'rdm'
+  'robomongo'
+  'skype'
+  'torbrowser'
+  'vlc'
+  'virtualbox'
+)
+
+printf "\n\e[36m\e[1mInstalling OS X $(sw_vers -productVersion) Native Apps \n\e[0m"
+for app in "${apps[@]}"
+do
+  #check if a certain apps in already installed
+  info=`brew cask info "$app" | sed -n 4p`
+  if [[ $info != "Not installed" ]]; then
+    printf "\n\e[91m ${app} is already installed\e[0m\n"
+  else
+    printf "\n\e[96mInstalling ${app}, please wait... \n\e[0m"
+    brew cask install $app
+  fi
+done

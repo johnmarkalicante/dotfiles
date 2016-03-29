@@ -1,0 +1,33 @@
+#!/bin/bash
+
+config="$HOME/Desktop/dotfiles"
+
+# Install zsh & oh-my-zsh
+if [ ! -d "${HOME}/.oh-my-zsh" ]; then
+  echo "Installing oh-my-zsh"
+  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  echo
+fi
+
+# Open Terminal Settings
+echo "Install Jories Base Theme"
+open "${config}/themes/Jories Base.terminal"
+sleep 1 # Wait a bit to make sure the theme is loaded
+cp -RfXv "${config}/themes/Jories Base.zsh-theme" "${HOME}/.oh-my-zsh/themes/jories.zsh-theme"
+echo
+
+# Set Terminal Custom Theme
+echo "Setting Jories Base-16.terminal as the default theme."
+defaults write com.apple.terminal "Default Window Settings" -string "Jories Base.terminal"
+defaults write com.apple.terminal "Startup Window Settings" -string "Jories Base.terminal"
+echo
+
+# Link .zshrc
+cp -RfXv "${config}/editor/.zshrc" "$HOME/.zshrc" && . ${HOME}/.zshrc
+echo
+
+# Set all sessions to zsh from here moving forward
+chsh -s /bin/zsh
+
+sleep 1
+killall Terminal

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+printf "\n\e[36m  --> Installing Homebrew Formulas \n\e[0m"
+  default_pkgs=(
+    'android-sdk'
+    'android-platform-tools'
+    'curl --with-openssl'
+    '/Users/jo-riescanino/Desktop/dotfiles/package/brew/nginx.rb --build-from-source'
+    '/Users/jo-riescanino/Desktop/dotfiles/package/brew/mongodb.rb --build-from-source'
+    'git'
+    'openssl'
+    'python'
+    'node'
+    'zsh'
+  )
+
+# Default Homebrew Packages
+for package in "${default_pkgs[@]}"
+do
+  if brew info $package | grep "Not installed" > /dev/null; then
+    printf "\n\e[36m Installing ${package}, please wait... \e[0m\n\n"
+    brew install $package
+    echo
+    echo
+  else
+    printf  "\n\e[91m ${package} is already installed. \n\e[0m"
+  fi
+done

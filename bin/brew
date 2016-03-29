@@ -1,0 +1,23 @@
+#!/bin/bash
+
+printf "\e[31m Did not find Homebrew installation \e[0m\n"
+printf "\e[96m\e[5m\e[1m Installing Homebrew.. \e[0m\n"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+
+default_taps=(
+  'homebrew/services'
+  'jawshooah/nodenv'
+  'caskroom/versions'
+  'caskroom/fonts'
+)
+
+for tap in ${default_taps[@]}
+  do
+    if [ "$(brew tap | grep -io ${tap})" == ${tap} ]; then
+      printf "\e[96m Already tapped: ${tap}\n\e[0m"
+    else
+      printf "\e[96m Tapping [ ${tap} ]\n\e[0m"
+      brew tap ${tap}
+    fi
+done

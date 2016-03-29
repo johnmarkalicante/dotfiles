@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# List Packages that will be installed
+node_modules=(
+  node-gyp
+  bower
+  express
+  gulp
+  nodemon
+  pm2
+)
+
+
+for module in ${node_modules[@]}
+do
+  # Install Node Packages
+  printf "\e[36m  --> Installing \e[0m\e[91m${module} \n\n\e[0m"
+  npm install -g "${module}"
+done
