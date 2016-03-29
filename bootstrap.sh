@@ -43,14 +43,12 @@ help() {
   usage
 }
 
-# test if the user is root/administrator
 if sudo -n true; then
   name
 fi
-# dirName=`sudo pwd`
 
 case "$@" in
-  # install first the terminal because it will used for the cask
+  # Install first the terminal because it will used for the cask
   # HOMEBREW_CASK_OPTS="--appdir=/Applications"
   ('--terminal')
     exec "${HOME}/Desktop/dotfiles/bin/terminal"; break;;
