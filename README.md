@@ -3,4 +3,4 @@ sudo -v \
 && mkdir -p $HOME/.dotfiles \  
 && chown $USER $HOME/.dotfiles \  
 && cp -RXa dotfiles/ $HOME/.dotfiles \  
-&& rm -rf dotfiles
+&& rm -rf dotfiles &>/dev/null
