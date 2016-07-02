@@ -2,16 +2,16 @@
 
 printf "\n\e[36m  --> Installing Homebrew Formulas \n\e[0m"
   default_pkgs=(
-    'android-sdk'
-    'android-platform-tools'
-    'curl --with-openssl'
-    '/Users/jo-riescanino/Desktop/dotfiles/package/brew/nginx.rb --build-from-source'
-    '/Users/jo-riescanino/Desktop/dotfiles/package/brew/mongodb.rb --build-from-source'
-    'git'
-    'openssl'
-    'python'
-    'node'
-    'zsh'
+    "android-sdk"
+    "android-platform-tools"
+    "curl --with-openssl"
+    "${HOME}/.dotfiles/package/brew/nginx.rb --build-from-source"
+    "${HOME}/.dotfiles/package/brew/mongodb.rb --build-from-source"
+    "git"
+    "openssl"
+    "python"
+    "nvm"
+    "zsh"
   )
 
 # Default Homebrew Packages
