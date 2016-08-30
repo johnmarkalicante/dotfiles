@@ -3,5 +3,8 @@ sudo -v \
 && mkdir -p $HOME/.dotfiles \  
 && chown $USER $HOME/.dotfiles \  
 && cp -RXa dotfiles/ $HOME/.dotfiles \  
-&& echo "alias dotfiles='$HOME/.dotfiles/bootstrap.sh'" >> ~/.bashrc \
 && rm -rf dotfiles &>/dev/null
+
+##Add the alias in your ~/.bashrc and source it.
+echo "alias dotfiles='$HOME/.dotfiles/bootstrap.sh'" >> ~/.bashrc \  
+&& . ~/.bashrc
