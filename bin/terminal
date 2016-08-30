@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config="$HOME/Desktop/dotfiles"
+config="$HOME/.dotfiles"
 
 # Install zsh & oh-my-zsh
 if [ ! -d "${HOME}/.oh-my-zsh" ]; then

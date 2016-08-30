@@ -50,6 +50,8 @@ class Nginx < Formula
     args = %W[
       --prefix=#{prefix}
       --with-http_ssl_module
+      --with-http_stub_status_module
+      --add-module=../nginx-rtmp-module-master
       --with-pcre
       --with-ipv6
       --sbin-path=#{bin}/nginx
