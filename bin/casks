@@ -8,7 +8,7 @@ apps=(
   'atom'
   'caffeine'
   'intellij-idea'
-  'dockertoolbox'
+  'docker-toolbox'
   'dropbox'
   'deluge' #bittorrent
   'encryptr'
@@ -30,7 +30,7 @@ printf "\n\e[36m\e[1mInstalling OS X $(sw_vers -productVersion) Native Apps \n\e
 for app in "${apps[@]}"
 do
   #check if a certain apps in already installed
-  info=`brew cask info "$app" | sed -n 4p`
+  info=`brew cask info "$app" | sed -n 3p`
   if [[ $info != "Not installed" ]]; then
     printf "\n\e[91m ${app} is already installed\e[0m\n"
   else

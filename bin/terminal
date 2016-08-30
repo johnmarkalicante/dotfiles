@@ -27,7 +27,7 @@ cp -RfXv "${config}/editor/.zshrc" "$HOME/.zshrc" && . ${HOME}/.zshrc
 echo
 
 # Set all sessions to zsh from here moving forward
-chsh -s /bin/zsh
+chsh -s $(which zsh)
 
 sleep 1
 killall Terminal
