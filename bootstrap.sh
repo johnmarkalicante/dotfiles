@@ -33,7 +33,6 @@ usage() {
         \e[36m- terminal    : \e[0m\e[96m setup terminal to use zshell and oh-my-zshell plugin\e[0m\e[0m
         \e[36m- osx         : \e[0m\e[96m default setup for osx (for OS X >= 10.8)\e[0m
         \e[36m- casks       : \e[0m\e[96m installs default native apps via brew-cask\e[0m
-        \e[36m- fonts       : \e[0m\e[96m installs default fonts declared from scripts/fonts\e[0m
         \e[36m- git         : \e[0m\e[96m setup for glolbal git config and setup for Github & Bitbucket SSH Keys\e[0m
         \e[36m- npm         : \e[0m\e[96m installs npm packages for the default node version\e[0m
   "

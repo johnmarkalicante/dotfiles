@@ -13,7 +13,6 @@ apps=(
   'deluge' #bittorrent
   'encryptr'
   'evernote'
-  'fiddler'
   'firefox'
   'firefoxdeveloperedition'
   'google-chrome'
