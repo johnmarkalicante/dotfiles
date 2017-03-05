@@ -125,7 +125,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 echo ""
 echo "Setting a blazingly fast keyboard repeat rate (ain't nobody got time fo special chars while coding!)"
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 echo ""
 echo "Disabling auto-correct"
@@ -248,7 +248,7 @@ file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 
 echo ""
 echo "Use list view in all Finder windows by default"
-echo "Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`"
+echo "Four-letter codes for the other view modes: icnv, clmv, Flwv"
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 echo ""
